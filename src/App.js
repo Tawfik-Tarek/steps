@@ -7,7 +7,7 @@ const messages = [
 ];
 
 export default function App() {
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(1);
 
   return (
     <div className="steps">
@@ -16,13 +16,13 @@ export default function App() {
         <div>2</div>
         <div>3</div>
       </div>
-      <p className="message"> {messages[currentStep] || "anything"} </p>
+      <p className="message"> {messages[currentStep - 1] || "anything"} </p>
       <div className="buttons">
         <button
           style={{ backgroundColor: "#7950f2", color: "#fff" }}
-          disabled={currentStep === 0}
+          disabled={currentStep === 1}
           onClick={() => {
-            if (currentStep === 0) {
+            if (currentStep === 1) {
               return;
             } else {
               setCurrentStep((prev) => prev - 1);
@@ -33,9 +33,9 @@ export default function App() {
         </button>
         <button
           style={{ backgroundColor: "#7950f2", color: "#fff" }}
-          disabled={currentStep === messages.length - 1}
+          disabled={currentStep === messages.length}
           onClick={() => {
-            if (currentStep === messages.length - 1) {
+            if (currentStep === messages.length) {
               return;
             } else {
               setCurrentStep((prev) => prev + 1);
