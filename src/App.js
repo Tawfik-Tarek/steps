@@ -12,9 +12,9 @@ export default function App() {
   return (
     <div className="steps">
       <div className="numbers">
-        <div className="active">1</div>
-        <div>2</div>
-        <div>3</div>
+        <div className={`${currentStep >= 1 ? "active" : ""}`}>1</div>
+        <div className={`${currentStep >= 2 ? "active" : ""}`}>2</div>
+        <div className={`${currentStep === 3 ? "active" : ""}`}>3</div>
       </div>
       <p className="message"> {messages[currentStep - 1] || "anything"} </p>
       <div className="buttons">
