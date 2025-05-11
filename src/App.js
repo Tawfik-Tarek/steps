@@ -9,6 +9,18 @@ const messages = [
 export default function App() {
   const [currentStep, setCurrentStep] = useState(1);
 
+  function handlePrev() {
+    if (currentStep !== 1) {
+      setCurrentStep((prev) => prev - 1);
+    }
+  }
+
+  function handleNext() {
+      if (currentStep !== messages.length) {
+        setCurrentStep((prev) => prev + 1);
+      }
+  }
+
   return (
     <div className="steps">
       <div className="numbers">
@@ -21,22 +33,14 @@ export default function App() {
         <button
           style={{ backgroundColor: "#7950f2", color: "#fff" }}
           disabled={currentStep === 1}
-          onClick={() => {
-            if (currentStep !== 1) {
-              setCurrentStep((prev) => prev - 1);
-            }
-          }}
+          onClick={handlePrev}
         >
           Prev
         </button>
         <button
           style={{ backgroundColor: "#7950f2", color: "#fff" }}
           disabled={currentStep === messages.length}
-          onClick={() => {
-            if (currentStep !== messages.length) {
-              setCurrentStep((prev) => prev + 1);
-            }
-          }}
+          onClick={handleNext}
         >
           Next
         </button>
