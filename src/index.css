@@ -21,6 +21,20 @@ body {
 .numbers {
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+
+.numbers::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #e7e7e7;
+  transform: translateY(-50%);
+  z-index: 0;
 }
 
 .numbers > div {
@@ -32,11 +46,27 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  position: relative;
+  z-index: 2;
 }
+
 
 .numbers .active {
   background-color: #7950f2;
   color: #fff;
+}
+
+.progress-bar {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #7950f2;
+  transition: width 0.7s ease;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 .message {
