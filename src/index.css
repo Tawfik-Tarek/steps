@@ -9,13 +9,19 @@ body {
   padding: 0;
 }
 
+div#root {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .steps {
   max-width: 600px;
   width: 90%;
   background-color: #f7f7f7;
   border-radius: 7px;
   padding: 25px 10%;
-  margin: 50px auto;
 }
 
 .numbers {
