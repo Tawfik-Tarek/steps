@@ -20,7 +20,7 @@ The Steps App is a clean and responsive React application that guides users thro
 1. Clone the repository:
 
    ```
-   git clone <repository-url>
+   git clone https://github.com/Tawfik-Tarek/steps.git
    ```
 
 2. Navigate to the project directory:
