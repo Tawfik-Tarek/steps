@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const messages = [
-  "Learn React ⚛️",
-  "Apply for jobs 💼",
-  "Invest your new income 🤑",
+  "Learn the Basics 📚",
+  "Practice Your Skills 💪",
+  "Master the Concepts 🏆",
 ];
 
 export default function App() {
