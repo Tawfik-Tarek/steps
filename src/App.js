@@ -22,9 +22,7 @@ export default function App() {
           style={{ backgroundColor: "#7950f2", color: "#fff" }}
           disabled={currentStep === 1}
           onClick={() => {
-            if (currentStep === 1) {
-              return;
-            } else {
+            if (currentStep !== 1) {
               setCurrentStep((prev) => prev - 1);
             }
           }}
@@ -35,9 +33,7 @@ export default function App() {
           style={{ backgroundColor: "#7950f2", color: "#fff" }}
           disabled={currentStep === messages.length}
           onClick={() => {
-            if (currentStep === messages.length) {
-              return;
-            } else {
+            if (currentStep !== messages.length) {
               setCurrentStep((prev) => prev + 1);
             }
           }}
